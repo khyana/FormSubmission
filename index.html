@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+	<div class="logo_image">
+		<header class="logo">
+			<p>PLACE FOR BRANDING/LOGO</p>
+		</header>
+	</div>
+		
+        <form onsubmit="return confirm('Your request has been submitted');">
+			<ul class="form-style-1">
+				<h2> Enquiry Form </h2>
+				<li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" required placeholder="Enter your First Name" />&nbsp;     <input type="text" name="field2" class="field-divided" required placeholder="Enter your Last Name" /></li>
+				
+				<li>
+					<label>Email<span class="required">*</span></label>
+					<input type="email" name="field3" class="field-long" required placeholder="Enter a valid email address"/>
+				</li>
+				<li>
+					<label>Phone Number </label>
+					<input type="tel" name="field4" class="field-long" pattern="^\d{10}$" placeholder="Enter 10 digit number"/>
+				</li>
+				<li>
+					<label>Sign up to newsletter?</label>
+					<input type="radio" name="Yes" value="Yes" > Yes, I would like to subscribe for newsletters.<br>
+			        <input type="radio" name="Yes" value="No"> No, Thank you very much.<br>
+				</li>				
+				<li>
+					<label>Enquiry <span class="required">*</span></label>
+					<textarea name="field6" id="field6" class="field-long field-textarea" required></textarea>
+				</li>
+				<li>
+					<label>Do you agree the below Terms and conditions?</label>
+					<textarea name="field5" id="field5" class="field-long field-textarea" disabled>This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.</textarea>
+					I agree <input type="checkbox" id="myCheck"  onclick="myFunction()">
+				</li>
+				<li>
+					<input type="Submit" id="Accept" value="Submit" disabled />
+					<input type="reset" value="Reset" name="Reset">
+				</li>
+			</ul>
+		</form>
+	<div class="footer">
+		<footer class="footerspace">
+			<p>PLACE FOR FOOTER</p>
+		</footer>
+	</div>
+	<script>
+		function myFunction() {
+		  var checkBox = document.getElementById("myCheck");
+		  var sbmt = document.getElementById("Accept");
+		  if (checkBox.checked == true){
+			sbmt.disabled = false;
+		  } else {
+			 sbmt.disabled = true;
+		  }
+		}
+	</script>
+    </body>
+</html>
